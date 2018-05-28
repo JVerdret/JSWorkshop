@@ -14,7 +14,7 @@ import { setState, getState } from "../store";
 
 const add = (urlulu) => {
     if (!urlulu) { return; } //Check if the field is not empty
-    if (urlulu.match(/\.(jpeg|jpg|gif|png)$/) == null) { return; }  // Check if the link is a valid pictures URL
+    //if (urlulu.match(/\.(jpeg|jpg|gif|png)$/) == null) { return; }  // Check if the link is a valid pictures URL
 
     const tablo = getState();
     setState([...tablo, urlulu]);
