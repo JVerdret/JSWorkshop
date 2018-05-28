@@ -9,6 +9,7 @@ const pictureInputElement = document.getElementById("picture-url-input");
 const pictureAddButtonElement = document.getElementById("picture-add-button");
 const pictureUpdateButtonElement = document.getElementById("picture-update-button");
 
+
 const pictureItemTemplate = document.getElementById("picture-item-template");
 
 const getInputContents = () => pictureInputElement.value;
@@ -45,8 +46,8 @@ const refreshGrid = () => {
     deleteButtonElement.addEventListener("click", () => {
       remove(i);
       refreshGrid();
-      console.log(items);    
     }
+
   );
 
     fragment.appendChild(clone);
