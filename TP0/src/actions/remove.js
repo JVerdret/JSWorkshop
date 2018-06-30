@@ -12,12 +12,9 @@ import { setState, getState } from "../store";
 */
 
 const remove = (i) => {
-    const tablo = getState();
-    var suppr = tablo.indexOf(String(i));
-    delete tablo[suppr];
-    console.log(suppr);  
-    tablo.length--;
-    setState(tablo);
+    const state = getState();
+    state.splice(state.findIndex((x) => x === i), 1);
+    setState(state);
     
 };
 
