@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { add as addMessage } from "../actions/messages";
 import MessageLayout from "./MessagesLayout";
+import InputMessage from "../components/InputMessage";
+import MessageList from "../components/MessageList";
 
 const mapStateToProps = ({ messages }, ownProps) => ({
   messages,
@@ -14,7 +16,7 @@ class Messages extends React.Component {
   }
 
   render() {
-    return <MessageLayout />;
+    return <MessageLayout renderList={() => <MessageList/>} renderInput={() => <InputMessage />} />;
   }
 }
 

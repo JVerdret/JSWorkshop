@@ -23,7 +23,7 @@ const MessageLayout = props => (
         height: "calc(20%)"
       }}
     >
-      Write Message
+      {props.renderInput()}
     </Layout.Footer>
   </Layout>
 );
